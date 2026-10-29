@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Butter &amp; Bloom Bakery</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    :root {
+      --ink: #44332d;
+      --berry: #a74452;
+      --cream: #fff8ed;
+      --peach: #f3d4c2;
+      --gold: #d99b4e;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font: 16px/1.65 Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+    }
+
+    .logo {
+      font: bold 1.5rem Georgia, serif;
+    }
+
+    .logo span {
+      color: var(--berry);
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      font-size: .95rem;
+    }
+
+    nav a:hover {
+      color: var(--berry);
+    }
+
+    .hero {
+      min-height: 510px;
+      display: flex;
+      align-items: center;
+      padding: 60px 10%;
+      color: white;
+      background:
+        linear-gradient(90deg, #38251dcc, #38251d22),
+        url("https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1800&q=85") center/cover;
+    }
+
+    .hero div {
+      max-width: 560px;
+    }
+
+    .hero h1 {
+      font: 4rem/1.08 Georgia, serif;
+      margin: 10px 0 18px;
+    }
+
+    .hero p {
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      color: var(--berry);
+      font-size: .76rem;
+      font-weight: bold;
+      letter-spacing: .16em;
+    }
+
+    .hero .eyebrow {
+      color: #ffe0bd;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 28px;
+      background: var(--berry);
+      color: white;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 68px 8%;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h2 {
+      font: 2.4rem Georgia, serif;
+      margin: 8px 0 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 6px 22px #44332d12;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card div {
+      padding: 20px;
+    }
+
+    .card h3 {
+      font: 1.35rem Georgia, serif;
+      margin-bottom: 6px;
+    }
+
+    .card strong {
+      display: block;
+      color: var(--berry);
+      margin-top: 10px;
+    }
+
+    .gallery-section {
+      background: #f8e9dc;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .custom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .custom img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    .custom p {
+      margin-bottom: 18px;
+    }
+
+    .custom .starting {
+      color: var(--berry);
+      font-weight: bold;
+    }
+
+    .offer {
+      text-align: center;
+      color: white;
+      background: var(--berry);
+    }
+
+    .offer .eyebrow {
+      color: #ffe0bd;
+    }
+
+    .offer p {
+      max-width: 620px;
+      margin: 10px auto 18px;
+    }
+
+    .offer strong {
+      color: #ffe0bd;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .contact h3 {
+      font: 1.25rem Georgia, serif;
+      margin-bottom: 8px;
+    }
+
+    .contact a {
+      color: var(--berry);
+    }
+
+    footer {
+      padding: 26px;
+      text-align: center;
+      background: var(--ink);
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero {
+        min-height: 430px;
+        padding: 45px 7%;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      section {
+        padding: 48px 6%;
+      }
+
+      .grid,
+      .custom,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery img {
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="#home">Butter <span>&amp;</span> Bloom</a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#custom">Custom cakes</a>
+      <a href="#offers">Seasonal</a>
+      <a href="#visit">Visit us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <p class="eyebrow">BAKED FRESH, MADE WITH LOVE</p>
+        <h1>A little sweetness<br>for every day.</h1>
+        <p>Cakes, pastries, and cookies made from scratch with the good stuff.</p>
+        <a class="button" href="#menu">Explore the menu</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="intro">
+        <p class="eyebrow">FROM OUR OVEN</p>
+        <h2>Freshly baked favorites</h2>
+        <p>Small-batch treats for slow mornings, celebrations, and everything between.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" alt="Chocolate layer cake">
+          <div>
+            <h3>Celebration cakes</h3>
+            <p>Vanilla bean, chocolate fudge, or red velvet.</p>
+            <strong>$38</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=900&q=80" alt="Fresh pastries">
+          <div>
+            <h3>Flaky pastries</h3>
+            <p>Butter croissants and seasonal fruit danishes.</p>
+            <strong>From $4</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=80" alt="Chocolate chip cookies">
+          <div>
+            <h3>Cookies</h3>
+            <p>Chewy centers, crisp edges, baked daily.</p>
+            <strong>$3 each</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="intro">
+        <p class="eyebrow">A FEAST FOR THE EYES</p>
+        <h2>Made to be shared</h2>
+      </div>
+
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80" alt="Berry cake with fresh fruit">
+        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80" alt="Cupcakes with frosting">
+        <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=900&q=80" alt="Freshly baked bread and pastries">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80" alt="Chocolate dessert">
+      </div>
+    </section>
+
+    <section class="custom" id="custom">
+      <div>
+        <p class="eyebrow">YOUR DAY, YOUR CAKE</p>
+        <h2>Dream it. We’ll bake it.</h2>
+        <p>From intimate birthdays to big celebrations, we create custom cakes made just for you. Choose your flavors, colors, and finishing touches.</p>
+        <p class="starting">Custom cakes from $65</p>
+        <a class="button" href="mailto:hello@butterandbloom.example">Request a design</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=1000&q=85" alt="Custom decorated celebration cake">
+    </section>
+
+    <section class="offer" id="offers">
+      <p class="eyebrow">A TASTE OF THE SEASON</p>
+      <h2>Strawberry shortcake days</h2>
+      <p>Fresh berries, cloud-soft cream, and vanilla sponge. Our seasonal mini cakes are here for a limited time.</p>
+      <strong>$28 · Available this week</strong>
+    </section>
+
+    <section id="visit">
+      <div class="intro">
+        <p class="eyebrow">COME SAY HELLO</p>
+        <h2>Your neighborhood bakery</h2>
+      </div>
+
+      <div class="contact">
+        <div>
+          <h3>Find us</h3>
+          <p>24 Maple Street<br>Portland, OR 97205</p>
+        </div>
+        <div>
+          <h3>Opening hours</h3>
+          <p>Tue–Fri: 7am–5pm<br>Sat–Sun: 8am–3pm<br>Monday: Closed</p>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <p>
+            <a href="tel:+15035550142">(503) 555-0142</a><br>
+            <a href="mailto:hello@butterandbloom.example">hello@butterandbloom.example</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Butter &amp; Bloom Bakery · Baked with a little extra love.</p>
+  </footer>
+</body>
+</html>
